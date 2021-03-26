@@ -1,0 +1,16 @@
+/home/intern/Documents/EmployeeBirthdays/bin/Debug/net5.0/EmployeeBirthdays
+/home/intern/Documents/EmployeeBirthdays/bin/Debug/net5.0/EmployeeBirthdays.deps.json
+/home/intern/Documents/EmployeeBirthdays/bin/Debug/net5.0/EmployeeBirthdays.runtimeconfig.json
+/home/intern/Documents/EmployeeBirthdays/bin/Debug/net5.0/EmployeeBirthdays.runtimeconfig.dev.json
+/home/intern/Documents/EmployeeBirthdays/bin/Debug/net5.0/EmployeeBirthdays.dll
+/home/intern/Documents/EmployeeBirthdays/bin/Debug/net5.0/ref/EmployeeBirthdays.dll
+/home/intern/Documents/EmployeeBirthdays/bin/Debug/net5.0/EmployeeBirthdays.pdb
+/home/intern/Documents/EmployeeBirthdays/obj/Debug/net5.0/EmployeeBirthdays.csprojAssemblyReference.cache
+/home/intern/Documents/EmployeeBirthdays/obj/Debug/net5.0/EmployeeBirthdays.GeneratedMSBuildEditorConfig.editorconfig
+/home/intern/Documents/EmployeeBirthdays/obj/Debug/net5.0/EmployeeBirthdays.AssemblyInfoInputs.cache
+/home/intern/Documents/EmployeeBirthdays/obj/Debug/net5.0/EmployeeBirthdays.AssemblyInfo.cs
+/home/intern/Documents/EmployeeBirthdays/obj/Debug/net5.0/EmployeeBirthdays.csproj.CoreCompileInputs.cache
+/home/intern/Documents/EmployeeBirthdays/obj/Debug/net5.0/EmployeeBirthdays.dll
+/home/intern/Documents/EmployeeBirthdays/obj/Debug/net5.0/ref/EmployeeBirthdays.dll
+/home/intern/Documents/EmployeeBirthdays/obj/Debug/net5.0/EmployeeBirthdays.pdb
+/home/intern/Documents/EmployeeBirthdays/obj/Debug/net5.0/EmployeeBirthdays.genruntimeconfig.cache
