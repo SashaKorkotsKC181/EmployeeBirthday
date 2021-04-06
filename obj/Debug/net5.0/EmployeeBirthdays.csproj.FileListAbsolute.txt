@@ -14,3 +14,5 @@
 /home/intern/Documents/EmployeeBirthdays/obj/Debug/net5.0/ref/EmployeeBirthdays.dll
 /home/intern/Documents/EmployeeBirthdays/obj/Debug/net5.0/EmployeeBirthdays.pdb
 /home/intern/Documents/EmployeeBirthdays/obj/Debug/net5.0/EmployeeBirthdays.genruntimeconfig.cache
+/home/intern/Documents/EmployeeBirthdays/bin/Debug/net5.0/Npgsql.dll
+/home/intern/Documents/EmployeeBirthdays/obj/Debug/net5.0/EmployeeBirthdays.csproj.CopyComplete

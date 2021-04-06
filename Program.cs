@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Npgsql;
 
 namespace EmployeeBirthdays
 {
@@ -8,7 +9,7 @@ namespace EmployeeBirthdays
         static void OutputList(List<Employee> listOfEmployee)
         {
             listOfEmployee.Sort();
-            foreach(Employee person in listOfEmployee)
+            foreach (Employee person in listOfEmployee)
             {
                 Console.WriteLine(person);
             }
@@ -29,24 +30,38 @@ namespace EmployeeBirthdays
         {
             Dictionary<int, List<Employee>> listOfEmployeeInMonth = new Dictionary<int, List<Employee>>();
 
-            List<Employee> test5Month = new List<Employee>();
-            test5Month.Add(new Employee(new DateTime(1998,5,20),"Ваня", "Иванов"));
-            test5Month.Add(new Employee(new DateTime(1988,5,24),"Аня", "Січ"));
-            List<Employee> test4Month = new List<Employee>();
-            test4Month.Add(new Employee(new DateTime(2000,4,1),"Коля", "Новогодний"));
-            test4Month.Add(new Employee(new DateTime(1991,4,7),"Стас", "Рождественский"));
-        
-            listOfEmployeeInMonth.Add(5, test5Month);
-            listOfEmployeeInMonth.Add(4,test5Month);
+            string connString = "Host=127.0.0.1;Username=employee_birthday_api;Password=secret;Database=employeebirthdays";
+
+            using var conn = new NpgsqlConnection(connString);
+            conn.Open();
+
+            // Retrieve all rows
+            using (var cmd = new NpgsqlCommand("SELECT name, surname, dateofbrith FROM employee", conn))
+            {
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        string name = reader.GetString(0);
+                        string surname = reader.GetString(1);
+                        DateTime date = reader.GetDateTime(2);
 
 
+                        Employee newEmployee = new Employee(date, name, surname);
 
+                        if (!listOfEmployeeInMonth.ContainsKey(date.Month))
+                        {
+                            listOfEmployeeInMonth.Add(date.Month, new List<Employee>());
+                        }
+
+                        listOfEmployeeInMonth[date.Month].Add(newEmployee);
+
+                    }
+                }
+            }
             int howManyMonthNext = 5;
+            OutputListOfEmployeeInMonth(howManyMonthNext, listOfEmployeeInMonth); 
 
-            OutputListOfEmployeeInMonth(howManyMonthNext, listOfEmployeeInMonth);
-
-
-            
         }
     }
 }
