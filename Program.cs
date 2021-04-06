@@ -26,7 +26,7 @@ namespace EmployeeBirthdays
                 }
             }
         }
-        static void Main(string[] args)
+        static Dictionary<int, List<Employee>> ReadFromDBAndSaveIntoDictionary()
         {
             Dictionary<int, List<Employee>> listOfEmployeeInMonth = new Dictionary<int, List<Employee>>();
 
@@ -59,6 +59,13 @@ namespace EmployeeBirthdays
                     }
                 }
             }
+            return listOfEmployeeInMonth;
+        }
+        static void Main(string[] args)
+        {
+            Dictionary<int, List<Employee>> listOfEmployeeInMonth = ReadFromDBAndSaveIntoDictionary();
+
+            
             int howManyMonthNext = 5;
             OutputListOfEmployeeInMonth(howManyMonthNext, listOfEmployeeInMonth); 
 
