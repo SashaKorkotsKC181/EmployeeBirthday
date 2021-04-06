@@ -47,7 +47,12 @@ namespace EmployeeBirthdays
                         DateTime date = reader.GetDateTime(2);
 
 
-                        Employee newEmployee = new Employee(date, name, surname);
+                        Employee newEmployee = new Employee()
+                        {
+                            Name = name,
+                            Surname = surname,
+                            DateOfBirth = date
+                        };
 
                         if (!listOfEmployeeInMonth.ContainsKey(date.Month))
                         {
